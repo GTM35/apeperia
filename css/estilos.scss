@@ -1,14 +1,13 @@
-/*Variaveis Scss*/
+//Variaveis Scss
 
 $cor-padrao: #c24e4b;
 $cor-auxiliar: #1e2c35;
 $cor-branca: #fff;
-$raio: 0.3em;
 
-/*Mixin Scss*/
+//Mixin Scss
 
-@mixin borda-arredondada {
-  border-radius: 0.3em;
+@mixin borda-arredondada($raio: 0.3em) {
+  border-radius: $raio;
 }
 
 @mixin sombra-padrao {
@@ -73,7 +72,7 @@ header .container {
 }
 
 .menu-opcoes a {
-  color: white;
+  color: $cor-branca;
   text-decoration: none;
 }
 
@@ -86,7 +85,7 @@ header .container {
   background: url(../imagens/destaque.jpg) center bottom repeat-x;
   -webkit-background-size: cover;
   background-size: cover;
-  color: white;
+  color: $cor-branca;
   height: 330px;
   padding-top: 10em;
 }
@@ -112,7 +111,7 @@ header .container {
   border: 0;
   padding: 0.6em;
   font-size: 1.2em;
-  @include borda-arredondada;
+  @include borda-arredondada(50px);
   @include sombra-padrao;
   font-weight: bold;
 }
@@ -182,7 +181,7 @@ header .container {
 }
 
 .plano {
-  background: white;
+  background: $cor-branca;
   width: 18em;
   display: inline-block;
   margin: 1em 0 0 1.4em;
